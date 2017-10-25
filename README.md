@@ -2,9 +2,9 @@
 
 This release contains 2 monit checks which are to be deployed on the master node.
 - Check 1:
- -- checks if the slave is connected to the master node
+  - checks if the slave is connected to the master node
 - Check 2:
--- checks if the replication between master and slave is working by creating a dummy key
+  - checks if the replication between master and slave is working by creating a dummy key
 
 ## Manifests
 ### Redis Slave Check
