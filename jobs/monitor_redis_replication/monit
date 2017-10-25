@@ -1,0 +1,3 @@
+check program Redis-Replication with path /var/vcap/jobs/monitor_redis_replication/bin/check_redis_replication.py
+    if status != 0 for 2 cycles then alert
+    group vcap_monitor

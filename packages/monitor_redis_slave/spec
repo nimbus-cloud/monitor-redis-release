@@ -1,0 +1,8 @@
+---
+name: monitor_redis_slave
+
+dependencies:
+   - python-2.7
+
+files: 
+  - monitor_redis_slave/**/*
