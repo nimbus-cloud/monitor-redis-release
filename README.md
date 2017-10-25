@@ -19,3 +19,8 @@ The required variables in manifests are
 - slave port
 - slave password
 - Warning threshold (time in seconds it takes for replication to occur)
+
+## Dependancy
+The checks are written in python and use the python module redis which is install via pip. To get this installed via bosh, python release is also required to be deployed. The release can be found here: https://github.com/bosh-packages/python-release
+
+In packages directory, the monitor_redis_slave directory is packaged to install this on deployment
