@@ -1,0 +1,17 @@
+---
+name: monitor_redis_replication
+templates:
+  check_redis_replication.py: bin/check_redis_replication.py
+
+packages: []
+
+properties:
+  redis_replication.host:
+    description: " Slave host/ip address to run the redis replication check on"
+  redis_replication.port:
+    description: "Slave port to run the redis replication check on"
+  redis_replication.password:
+    description: "Slave password to run the redis replication check on"
+  redis_replication.warning_threshold:
+    description: "Threshold to check how long it took to replicate data"
+  

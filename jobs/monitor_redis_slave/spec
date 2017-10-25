@@ -1,0 +1,15 @@
+---
+name: monitor_redis_slave
+templates:
+  check_redis_slave.py: bin/check_redis_slave.py
+
+packages: 
+   - monitor_redis_slave 
+
+properties:
+  redis_slave.host:
+    description: "Slave host/ip address to run the redis slave check on"
+  redis_slave.port:
+    description: "Port to run the redis slave check on"
+  redis_slave.password:
+    description: "Password to run the redis slave check on"
