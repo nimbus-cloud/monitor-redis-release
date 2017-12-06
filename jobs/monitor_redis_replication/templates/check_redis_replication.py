@@ -69,7 +69,7 @@ def getts ():
 if __name__ == '__main__':
     master_ts = setts()
     start_time = time.time()
-    timeout = time.time() + max_sec_accepted_behind_master_critical + 2
+    timeout = time.time() + float(max_sec_accepted_behind_master_critical) + 2
     while True:
         slave_ts = getts()
         if ( time.time() > timeout ):
