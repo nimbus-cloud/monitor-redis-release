@@ -1,3 +1,0 @@
-check program Redis-Slave-Connection with path /var/vcap/jobs/monitor_redis_slave/bin/check_redis_slave.py
-    if status != 0 for 2 cycles then alert
-    group vcap_monitor

@@ -1,6 +1,0 @@
-#!/bin/bash -eu
-
-
-source /var/vcap/packages/python-2.7/bosh/compile.env
-/var/vcap/packages/python-2.7/bin/pip install redis
-
