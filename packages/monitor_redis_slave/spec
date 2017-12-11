@@ -2,7 +2,8 @@
 name: monitor_redis_slave
 
 dependencies:
-   - python-2.7
+   - python3
 
 files: 
-  - monitor_redis_slave/**/*
+  - python/Python-3.4.3.tgz
+  - monitor_redis_slave/check_redis_slave.tgz
