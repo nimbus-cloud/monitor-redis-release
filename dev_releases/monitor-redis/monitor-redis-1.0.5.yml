@@ -1,0 +1,13 @@
+name: monitor-redis
+version: 1.0.5
+commit_hash: 4f57c58
+uncommitted_changes: true
+jobs:
+- name: monitor_redis_replication
+  version: 8ad08197ccb43b4c651d354229ff62fad2fda273
+  fingerprint: 8ad08197ccb43b4c651d354229ff62fad2fda273
+  sha1: 8880547732ce56296562d204d4fb094e37050f27
+- name: monitor_redis_slave
+  version: c517e80e0bc82938bd858f9b4ea203945098269e
+  fingerprint: c517e80e0bc82938bd858f9b4ea203945098269e
+  sha1: 463542530c3259611e6c454e84a248e5b7fc7e36

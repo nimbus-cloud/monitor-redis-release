@@ -1,0 +1,38 @@
+builds:
+  10347157-53b0-4797-5b5b-92c838085648:
+    version: 1.0.10
+  284a0c2a-2cc5-4bb1-5fac-c2ef895ada5f:
+    version: 1.0.14
+  2e9cec7e-7414-44c5-494e-e1100a028681:
+    version: 1.0.9
+  4424be83-b909-4292-6b39-ba9de6a18a21:
+    version: 1.0.7
+  4e8d5d7f-4be6-457a-4046-b2f655ff63c0:
+    version: 1.0.16
+  784911f0-cb6a-4a89-713f-75763e609cd7:
+    version: 1.0.19
+  81c91c2f-9242-41a5-5c5c-7c30458cd98c:
+    version: 1.0.6
+  904aef09-e9f7-430d-6441-a1b7f0d1a181:
+    version: 1.0.11
+  91ce4f11-d41f-4b3f-7dfa-2cd19be6530f:
+    version: 1.0.8
+  a1a95fcf-429b-4924-4ebe-8bcb7de34415:
+    version: 1.0.12
+  ae4453c7-17b8-4452-5822-19a04803c8df:
+    version: 1.0.18
+  b494257a-96c0-4271-5270-40ebbf4ae07c:
+    version: 1.0.17
+  b91c5703-0151-4580-6ac3-b6e8f7a32f74:
+    version: 1.0.15
+  bcf758bf-1cee-49ea-4d7d-d8dabff338b6:
+    version: 1.0.13
+  d1ccacf3-35ab-416b-73d1-f7e3344c7e48:
+    version: 1.0.22
+  dcdbcb54-afb2-46cd-6a2a-913c227d6b3d:
+    version: 1.0.20
+  ec29b2f8-3014-44f2-5fae-a6b0d8b03d21:
+    version: 1.0.21
+  fb5b76e0-eb84-4ccf-7dfc-3353489bb65a:
+    version: 1.0.5
+format-version: "2"

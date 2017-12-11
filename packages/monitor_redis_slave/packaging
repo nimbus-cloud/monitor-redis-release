@@ -1,0 +1,32 @@
+#!/bin/bash -eu
+
+export PATH=/var/vcap/packages/python-2.7/bin/:${PATH}
+
+
+# Copy common utils
+mkdir -p ${BOSH_INSTALL_TARGET}/common
+cp -a ${BOSH_COMPILE_TARGET}/common/* ${BOSH_INSTALL_TARGET}/common
+
+# Extract check_redis_monitor package
+mkdir -p ${BOSH_INSTALL_TARGET}/vendor
+cd ${BOSH_COMPILE_TARGET}/monitor_redis_slave
+tar xzvf check_redis_monitor.tgz
+cp -a ./* ${BOSH_INSTALL_TARGET}/vendor
+
+find / -iname redis-2.10.6-py2.py3-none-any.whl
+
+
+pip install --no-index --find-links /var/vcap/packages/monitor_redis_slave/vendor/src/monitor_redis_slave/vendor/ --install-option="--prefix=/var/vcap/packages/monitor_redis_slave" redis
+
+#pip install --install-option="--home=/var/vcap/packages/monitor_redis_slave/vendor/src/monitor_redis_slave/vendor/redis-2.10.6-py2.py3-none-any.whl" redis
+
+
+#pip install --no-index --find-links /var/vcap/packages/monitor_redis_slave/vendor/src/monitor_redis_slave/vendor/redis-2.10.6-py2.py3-none-any.whl
+
+
+#cd ${BOSH_INSTALL_TARGET}/monitor-redis-release
+#
+#tar xzvf check_redis_monitor.tgz
+
+#pip install *.whl
+

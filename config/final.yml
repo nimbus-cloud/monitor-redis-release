@@ -1,0 +1,6 @@
+---
+name: monitor-redis
+blobstore:  
+  provider: local
+  options:
+    blobstore_path: /tmp/blobs
