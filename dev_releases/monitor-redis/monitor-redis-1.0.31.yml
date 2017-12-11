@@ -1,0 +1,25 @@
+name: monitor-redis
+version: 1.0.31
+commit_hash: 0ab8cbe
+uncommitted_changes: true
+jobs:
+- name: monitor_redis_replication
+  version: 9fde4d3e7995843c58c2795a3590ebb9ebb9f624
+  fingerprint: 9fde4d3e7995843c58c2795a3590ebb9ebb9f624
+  sha1: 82fe21324533247c41f87addf6c5c8b4b175a6a9
+- name: monitor_redis_slave
+  version: f0b99367bb47a154fdab7244464aa7235efa41ed
+  fingerprint: f0b99367bb47a154fdab7244464aa7235efa41ed
+  sha1: 412fa31affbe4596487706aca73d159182d9395b
+packages:
+- name: monitor_redis_slave
+  version: a501a4fb85478741ca2ce9867794707965e66acc
+  fingerprint: a501a4fb85478741ca2ce9867794707965e66acc
+  sha1: 7b7e56188df795bc366f6acfe4d4e40864f40146
+  dependencies:
+  - python3
+- name: python3
+  version: f717e6010164da132548c4b2059015bfce62800e
+  fingerprint: f717e6010164da132548c4b2059015bfce62800e
+  sha1: e722033cb94210b575010004a8cf300546e102ed
+  dependencies: []

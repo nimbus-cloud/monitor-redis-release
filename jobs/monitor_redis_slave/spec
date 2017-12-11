@@ -5,6 +5,7 @@ templates:
 
 packages: 
    - monitor_redis_slave 
+   - python3 
 
 properties:
   redis_slave.host:

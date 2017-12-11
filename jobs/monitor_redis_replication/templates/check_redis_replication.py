@@ -14,6 +14,7 @@ STATE_WARNING = 1
 
 try:
     sys.path.insert(0, '/var/vcap/packages/python-2.7/lib/python2.7/site-packages')
+    sys.path.insert(0, '/var/vcap/packages/python3/lib/python3.4/site-packages')
     import redis
 except ImportError:
     print ("WARNING: need to install redis python library." +

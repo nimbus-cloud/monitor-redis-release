@@ -4,6 +4,7 @@
 
 import os, sys, json
 sys.path.insert(0, '/var/vcap/packages/python-2.7/lib/python2.7/site-packages')
+sys.path.insert(0, '/var/vcap/packages/python3/lib/python3.4/site-packages')
 import redis
 
 # Debug
