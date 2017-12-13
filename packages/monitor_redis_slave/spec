@@ -1,9 +1,0 @@
----
-name: monitor_redis_slave
-
-dependencies:
-   - python3
-
-files: 
-  - python/Python-3.4.3.tgz
-  - monitor_redis_slave/check_redis_slave.tgz

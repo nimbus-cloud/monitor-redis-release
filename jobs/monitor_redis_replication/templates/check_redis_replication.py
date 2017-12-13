@@ -5,21 +5,17 @@ import time
 from decimal import Decimal
 import math
 
+egg_path='/var/vcap/packages/python_2.7.13/lib/python2.7/site-packages/redis-2.10.6-py2.7.egg'
+sys.path.append(egg_path)
+import redis
+
+
 REPL_DELAY_TEST_KEY = 'REPL_DELAY_TEST_KEY'
 master_ts = 0
 slave_ts = 0
 
 STATE_OK = 0
 STATE_WARNING = 1
-
-try:
-    sys.path.insert(0, '/var/vcap/packages/python-2.7/lib/python2.7/site-packages')
-    sys.path.insert(0, '/var/vcap/packages/python3/lib/python3.4/site-packages')
-    import redis
-except ImportError:
-    print ("WARNING: need to install redis python library." +
-           "easy_install redis")
-    sys.exit(STATE_WARNING)
 
 
 ***REMOVED***

@@ -3,9 +3,10 @@
 # Redis Slave Connectivity Check
 
 import os, sys, json
-sys.path.insert(0, '/var/vcap/packages/python-2.7/lib/python2.7/site-packages')
-sys.path.insert(0, '/var/vcap/packages/python3/lib/python3.4/site-packages')
+egg_path='/var/vcap/packages/python_2.7.13/lib/python2.7/site-packages/redis-2.10.6-py2.7.egg'
+sys.path.append(egg_path)
 import redis
+
 
 ***REMOVED***
 ***REMOVED***

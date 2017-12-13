@@ -1,0 +1,10 @@
+---
+name: python_2.7.13
+
+dependencies: []
+
+files:
+- python/python-2.7.13.tar.gz
+- python/setuptools-36.0.1.zip
+- python/wheel-0.30.0a0.tar.gz
+- python/redis-2.10.6.tar.gz
