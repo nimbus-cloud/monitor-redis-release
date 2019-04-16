@@ -7,12 +7,6 @@ egg_path='/var/vcap/packages/python_2.7.13/lib/python2.7/site-packages/redis-2.1
 sys.path.append(egg_path)
 import redis
 
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-
 host = "<%= p('redis_slave.host') %>"
 port = "<%= p('redis_slave.port') %>"
 password = "<%= p('redis_slave.password') %>"

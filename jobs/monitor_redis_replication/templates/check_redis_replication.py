@@ -17,13 +17,6 @@ slave_ts = 0
 STATE_OK = 0
 STATE_WARNING = 1
 
-
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-***REMOVED***
-
 host = "<%= p('redis_replication.host') %>"
 port = "<%= p('redis_replication.port') %>"
 password = "<%= p('redis_replication.password') %>"
