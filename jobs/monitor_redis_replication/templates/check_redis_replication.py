@@ -22,6 +22,8 @@ port = "<%= p('redis_replication.port') %>"
 password = "<%= p('redis_replication.password') %>"
 max_sec_accepted_behind_master_critical = "<%= p('redis_replication.warning_threshold') %>"
 max_sec_accepted_behind_master_warning = 1
+user = "<%= p('redis_replication.user') %>"
+user_password = "<%= p('redis_replication.user_password') %>"
 
 r_conn_slave = redis.StrictRedis(host=host, port=port, password=password)
 
@@ -37,10 +39,13 @@ def setts ():
     try:
         r_conn_master = redis.StrictRedis(host=master_host, port=master_port, password=password)
         # set a timestamp on master as value for the delay test key
-        r_conn_master.delete(REPL_DELAY_TEST_KEY)
-        master_ts = str(time.time())
-        r_conn_master.set(REPL_DELAY_TEST_KEY, master_ts)
-        #print "Setting ts: %s" % master_ts
+        r_conn_master.set('user', user)
+        r_conn_master.set('user_password', user_password)
+        master_ts = r_conn_master.get('user')
+        #r_conn_master.delete(REPL_DELAY_TEST_KEY)
+        #master_ts = str(time.time())
+        #r_conn_master.set(REPL_DELAY_TEST_KEY, master_ts)
+        print "Setting ts: %s" % master_ts
     except Exception as e:
         print "Error when trying to write to master: %s" % e
         sys.exit(STATE_WARNING)
@@ -49,8 +54,9 @@ def setts ():
 def getts ():
     try:
         # get the value of the delay test key from slave
-        slave_ts = str(r_conn_slave.get(REPL_DELAY_TEST_KEY))
-        #print "Getting ts: %s" % slave_ts
+        slave_ts = r_conn_slave.get('user')
+        #slave_ts = str(r_conn_slave.get(REPL_DELAY_TEST_KEY))
+        print "Getting ts: %s" % slave_ts
     except Exception as e:
         print "Error when trying to read from slave: %s" % e
         sys.exit(STATE_WARNING)
