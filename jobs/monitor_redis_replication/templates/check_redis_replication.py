@@ -9,8 +9,6 @@ egg_path='/var/vcap/packages/python_2.7.13/lib/python2.7/site-packages/redis-2.1
 sys.path.append(egg_path)
 import redis
 
-
-REPL_DELAY_TEST_KEY = 'REPL_DELAY_TEST_KEY'
 master_ts = 0
 slave_ts = 0
 
@@ -42,9 +40,6 @@ def setts ():
         r_conn_master.set('user', user)
         r_conn_master.set('user_password', user_password)
         master_ts = r_conn_master.get('user')
-        #r_conn_master.delete(REPL_DELAY_TEST_KEY)
-        #master_ts = str(time.time())
-        #r_conn_master.set(REPL_DELAY_TEST_KEY, master_ts)
         print "Setting ts: %s" % master_ts
     except Exception as e:
         print "Error when trying to write to master: %s" % e
@@ -55,7 +50,6 @@ def getts ():
     try:
         # get the value of the delay test key from slave
         slave_ts = r_conn_slave.get('user')
-        #slave_ts = str(r_conn_slave.get(REPL_DELAY_TEST_KEY))
         print "Getting ts: %s" % slave_ts
     except Exception as e:
         print "Error when trying to read from slave: %s" % e
