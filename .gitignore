@@ -1,2 +1,4 @@
 *.tgz
 dev_releases/monitor-redis/*
+dev_releases/
+.dev_builds/
