@@ -14,4 +14,8 @@ properties:
     description: "Slave password to run the redis replication check on"
   redis_replication.warning_threshold:
     description: "Threshold to check how long it took to replicate data"
+  redis_replication.user:
+    description: "User to be created to replicate data"
+  redis_replication.user_password:
+    description: "Password for created user to replicate data"
   
